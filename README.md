@@ -14,7 +14,10 @@ The numbers I've used in my mod are calculated loosely based on what I could fin
 Shotguns are peculiar in games like 7DTD because no distinction is made between shot spread and accuracy. Increasing spread decreases accuracy at long ranges, but greatly increases hit probability at close range regardless of where the weapon is pointed - a situation with no bearing in reality (targets should only be easier to hit at closer ranges because they are effectively larger). As a compromise between accuracy and power when shooting from the hip, I've given shotguns similar handling characteristics to handguns. Not entirely realistic, but better than the alternatives.
 
 ## INSTALLATION:
-1. Place the BallisticMod folder in your 7 Days To Die mod folder (e.g: "C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\")
+1. Create a folder named "Mods" in your 7DTD directory if it doesn't not already exist (e.g: "C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\")
+1. Place the BallisticMod folder in your 7 Days To Die mods folder
 2. Start the game
 
+## UNINSTALLATION
+1. Remove/delete BallisticMod folder from the 7DTD Mods directory
 
