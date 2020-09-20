@@ -3,8 +3,8 @@
 A 7DTD modlet which attempts to make firearm ballistics/handling more realistic. Developed for A19.
 
 * Crosshairs will not appear while aiming a weapon with sights or optics
-* Shotguns are now more accurate and have greater effective reach.
-* Blunderbusses behave similarly how they did before and still have limited range and a very wide spread
+* Shotguns are now more accurate and have greater effective reach
+* Blunderbusses still have limited range and a very wide spread, but slightly less so than before
 * Handguns now have realistic range and accuracy and remain extremely effective
 * Rifles have much better range and accuracy than anything else, more so than before (though are probably first limited by the game's max view distance)
 * Handguns benefit least from being aimed, shotguns slightly more, and rifles the most
