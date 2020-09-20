@@ -51,7 +51,6 @@ false
 false
 </set>
 
-
 <!--Set roughly/relatively correct firearm ballistics-->
 <!--Shotguns-->
 <set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@name='Tags']/@value">
@@ -63,64 +62,71 @@ weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,barrelAttachments,sideA
 <set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@name='Tags']/@value">
 weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic
 </set>
-
+<!-- Blunderbuss - ~30" spread @ 10 yards, 5 times worse while not aiming-->
 <append xpath="/items/item[@name='gunShotgunT0Blunderbuss']/effect_group[@name='gunShotgunT0Blunderbuss']">
-		<passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkBoomstick"/>
+		<passive_effect name="MaxRange" operation="base_set" value="40" tags="perkBoomstick"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="15" tags="perkBoomstick"/>
 		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.3,.3" tags="perkBoomstick"/> 
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.0" tags="perkBoomstick"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.0" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".7" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="23.8" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="23.8" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".2" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkBoomstick"/>
 		
 </append>
 
-<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']">
-		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkBoomstick"/>
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkBoomstick"/>
-		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> 
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3.8" tags="perkBoomstick"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3.8" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".7" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkBoomstick"/>
-		
-</append>
-
+<!-- while aiming, 3.5" spread @ 50 feet, 0.66 degree spread, good 00 buckshot shotcup; 10 times worse while not aiming-->
 <append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']">
 		<passive_effect name="MaxRange" operation="base_set" value="105" tags="perkBoomstick"/>
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="38" tags="perkBoomstick"/>
 		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> 
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3.3" tags="perkBoomstick"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3.3" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".50" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.6" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.6" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".1" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkBoomstick"/>
+		
+</append>
+<!--Set shotgun tube capacity to 6 shells-->
+<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='MagazineSize']" name="value">
+6
+</setattribute>
+<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@value='6']" name="operation">
+base_set
+</setattribute>
+
+<!-- Sawed off shotgun: worse spread than pump shotgun (cut off choke), less range. Half as accurate while aimed. -->
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']">
+		<passive_effect name="MaxRange" operation="base_set" value="80" tags="perkBoomstick"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkBoomstick"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> 
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.6" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.6" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".2" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkBoomstick"/>
 		
 </append>
 
-<set xpath="/items/item[@name='gunBowT3CompoundBow']/property[@name='CrosshairOnAim']/@value">
-false
-</set>
+
 
 <append xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']">
 		<passive_effect name="MaxRange" operation="base_set" value="105" tags="perkBoomstick"/>
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="38" tags="perkBoomstick"/>
 		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> 
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3.3" tags="perkBoomstick"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3.3" tags="perkBoomstick"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".50" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.6" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4.6" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".1" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkBoomstick"/>
 		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkBoomstick"/>
 </append>
 
 <!--Rifles-->
-<!--.308 Win ~20" barrel-->
+<!-- Model 700 Remington .308 Win ~26" barrel, ~0.8 MOA while aiming, 20 times worse while not-->
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='MaxRange']" name="value">
 800
 </setattribute>
@@ -128,21 +134,22 @@ false
 528
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-1.0
+0.53
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-1.0
+0.53
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.08
+.05
 </setattribute>
+
 <!--The Model 700 Remington chambered for .30-06 should have a magazine capacity of 4+1, but making it not act like a semiauto with a larger magazine
 prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='MagazineSize']" name="value">
 1
 </setattribute>
 
-<!--5.56x45mm NATO ~16" barrel-->
+<!--AR15 5.56x45mm NATO ~16" barrel, ~1.5 MOA while aiming, 20 times worse while not-->
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='MaxRange']" name="value">
 245
 </setattribute>
@@ -150,16 +157,16 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 167
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-1.1
+1.0
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-1.1
+1.0
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.1
+.05
 </setattribute>
 
-<!--7.62x39mm ~16" barrel-->
+<!--AKM 7.62x39mm, ~5.5 MOA while aiming, 18 times worse while not-->
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='MaxRange']" name="value">
 200
 </setattribute>
@@ -167,15 +174,15 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 133
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-1.2
+3.3
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-1.2
+3.3
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.1
+.055
 </setattribute>
-<!--.308 Win AR-10-->
+<!--.308 Win AR-10, 0.5 MOA while aiming, 20 times worse while not-->
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='MaxRange']" name="value">
 800
 </setattribute>
@@ -183,26 +190,26 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 528
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-1.0
+0.333
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-1.0
+0.333
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.09
+.05
 </setattribute>
-
+<!--Dragnunov, 1.24 MOA while aiming, 25 times worse while not -->
 <setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-1.0
+1.033
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-1.0
+1.033
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.08
+.04
 </setattribute>
 
-<!--5.56x45mm NATO ~16" barrel-->
+<!--M60 7.62x51mm NATO, ~3 MOA while aiming, 20 times worse while not-->
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='MaxRange']" name="value">
 245
 </setattribute>
@@ -210,19 +217,19 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 167
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-1.5
+2.0
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-1.5
+2.0
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.14
+.05
 </setattribute>
 
 
 
 <!--Pistol cartridge weapons-->
-<!--9mm Luger Beretta 92fs-->
+<!--9mm Luger Beretta 92fs, ~10 MOA while aiming, 10 times worse while not-->
 <setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='MaxRange']" name="value">
 100
 </setattribute>
@@ -230,16 +237,16 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 30
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-3.8
+3.3
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-3.8
+3.3
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.65
+.1
 </setattribute>
 
-<!--9mm Luger MP5 length barrel-->
+<!--MP5 length barrel, ~4.13 MOA while aiming, 15 times worse while not -->
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='MaxRange']" name="value">
 95
 </setattribute>
@@ -247,15 +254,16 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 40
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadDegreesVertical']" name="value">
-2.0
+2.1
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadDegreesHorizontal']" name="value">
-2.0
+2.1
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.2
+.067
 </setattribute>
-<!--44 magnum 6" barrel-->
+
+<!--44 magnum 6" barrel, 11.5 MOA while aiming, 10 times worse while not-->
 <setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='MaxRange']" name="value">
 100
 </setattribute>
@@ -269,9 +277,9 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 3.8
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.5
+.1
 </setattribute>
-<!--44 magnum 6" barrel auto-->
+<!--44 magnum 6" barrel auto, 11.5 MOA-->
 <setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='MaxRange']" name="value">
 100
 </setattribute>
@@ -285,7 +293,7 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 3.8
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
-.55
+.1
 </setattribute>
 
 </configs>
