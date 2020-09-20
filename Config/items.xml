@@ -175,6 +175,12 @@ base_set
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
 .05
 </setattribute>
+<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='RoundsPerMinute']" name="value">
+825
+</setattribute>
+<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='RoundsPerMinute' and @value='825']" name="operation">
+base_set
+</setattribute>
 
 <!--AKM 7.62x39mm, ~5.5 MOA while aiming, 18 times worse while not-->
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='MaxRange']" name="value">
@@ -198,6 +204,13 @@ base_set
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
 .1
 </setattribute>
+<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='RoundsPerMinute']" name="value">
+600
+</setattribute>
+<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='RoundsPerMinute' and @value='600']" name="operation">
+base_set
+</setattribute>
+
 <!--.308 Win AR-10, 0.5 MOA while aiming, 10 times worse while not-->
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='MaxRange']" name="value">
 981
@@ -265,7 +278,12 @@ base_set
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
 .05
 </setattribute>
-
+<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='RoundsPerMinute']" name="value">
+600
+</setattribute>
+<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='RoundsPerMinute' and @value='600']" name="operation">
+base_set
+</setattribute>
 
 
 <!--Pistol cartridge weapons-->
@@ -314,6 +332,12 @@ base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadMultiplierAiming']" name="value">
 .067
+</setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='RoundsPerMinute']" name="value">
+800
+</setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='RoundsPerMinute' and @value='800']" name="operation">
+base_set
 </setattribute>
 
 <!--44 magnum 6" barrel, 11.5 MOA while aiming, 5 times worse while not-->
