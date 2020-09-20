@@ -14,8 +14,6 @@ The numbers I've used in my mod are calculated loosely based on what I could fin
 
 Effective ranges shown in game are in blocks, which by my estimation have a length of about 82% of a yard, and indicate the distance after which there is damage falloff.
 
-Shotguns are peculiar in games like 7DTD because no distinction is made between shot spread and accuracy. Increasing spread decreases accuracy at long ranges, as with weapons which only fire a single projectile at a time, but doing so with shotguns also increases hit probability at close range regardless of where the weapon is pointed - a situation with no bearing in reality. As a compromise between accuracy and power when shooting from the hip, I've given shotguns similar handling characteristics to handguns. Not entirely realistic, but better than the alternatives.
-
 ## INSTALLATION:
 1. Create a folder named "Mods" in your 7DTD directory if it doesn't not already exist (e.g: "C:\Program Files (x86)\Steam\steamapps\common\7 Days To Die\Mods\")
 1. Place the BallisticMod folder in your 7 Days To Die mods folder
