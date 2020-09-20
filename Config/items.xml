@@ -128,8 +128,14 @@ base_set
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='MaxRange']" name="value">
 800
 </setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='MaxRange' and @value='800']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='DamageFalloffRange']" name="value">
 528
+</setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='DamageFalloffRange' and @value='528']" name="operation">
+base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group[@name='gunRifleT1HuntingRifle']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 0.53
@@ -151,8 +157,14 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='MaxRange']" name="value">
 245
 </setattribute>
+<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='MaxRange' and @value='245']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='DamageFalloffRange']" name="value">
 167
+</setattribute>
+<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='DamageFalloffRange' and @value='167']" name="operation">
+base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 1.0
@@ -168,8 +180,14 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='MaxRange']" name="value">
 200
 </setattribute>
+<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='MaxRange' and @value='200']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='DamageFalloffRange']" name="value">
 133
+</setattribute>
+<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='DamageFalloffRange' and @value='133']" name="operation">
+base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 1.815
@@ -184,8 +202,14 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='MaxRange']" name="value">
 800
 </setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='MaxRange' and @value='800']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='DamageFalloffRange']" name="value">
 528
+</setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='DamageFalloffRange' and @value='528']" name="operation">
+base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT2MarksmanRifle']/effect_group[@name='gunRifleT2MarksmanRifle']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 0.333
@@ -197,6 +221,18 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 .05
 </setattribute>
 <!--Dragnunov, 1.24 MOA while aiming, 25 times worse while not -->
+<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='MaxRange']" name="value">
+800
+</setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='MaxRange' and @value='800']" name="operation">
+base_set
+</setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='DamageFalloffRange']" name="value">
+528
+</setattribute>
+<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='DamageFalloffRange' and @value='528']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 1.033
 </setattribute>
@@ -211,8 +247,14 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='MaxRange']" name="value">
 245
 </setattribute>
+<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='MaxRange' and @value='245']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='DamageFalloffRange']" name="value">
 167
+</setattribute>
+<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='DamageFalloffRange' and @value='167']" name="operation">
+base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 2.0
@@ -228,12 +270,18 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 
 <!--Pistol cartridge weapons-->
 <!--9mm Luger Beretta 92fs, ~10 MOA while aiming, 5 times worse while not-->
-<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='MaxRange']" name="value">
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='MaxRange']/@value">
 100
-</setattribute>
-<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='DamageFalloffRange']" name="value">
+</set>
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='MaxRange' and @value='100']/@operation">
+base_set
+</set>
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='DamageFalloffRange']/@value">
 30
-</setattribute>
+</set>
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='DamageFalloffRange' and @value='30']/@operation">
+base_set
+</set>
 <setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 1.65
 </setattribute>
@@ -248,9 +296,17 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='MaxRange']" name="value">
 95
 </setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='MaxRange' and @value='95']" name="operation">
+base_set
+</setattribute>
+
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='DamageFalloffRange']" name="value">
 40
 </setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='DamageFalloffRange' and @value='40']" name="operation">
+base_set
+</setattribute>
+
 <setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 2.1
 </setattribute>
@@ -265,9 +321,17 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='MaxRange']" name="value">
 100
 </setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='MaxRange' and @value='100']" name="operation">
+base_set
+</setattribute>
+
 <setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='DamageFalloffRange']" name="value">
 67
 </setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='DamageFalloffRange' and @value='67']" name="operation">
+base_set
+</setattribute>
+
 <setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 1.9
 </setattribute>
@@ -281,8 +345,14 @@ prob needs to be done in the hardcode; the bolt still needs to be worked-->
 <setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='MaxRange']" name="value">
 100
 </setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='MaxRange' and @value='100']" name="operation">
+base_set
+</setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='DamageFalloffRange']" name="value">
 67
+</setattribute>
+<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='DamageFalloffRange' and @value='67']" name="operation">
+base_set
 </setattribute>
 <setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/passive_effect[@name='SpreadDegreesVertical']" name="value">
 1.9
