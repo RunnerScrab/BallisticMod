@@ -1,6 +1,6 @@
 # BallisticMod
 ## Overview
-A 7DTD modlet which attempts to make firearm ballistics/handling more realistic.
+A 7DTD modlet which attempts to make firearm ballistics/handling more realistic. Developed for A19.
 
 * Crosshairs will not appear while aiming a weapon with sights or optics
 * Shotguns are now more accurate and have greater effective reach.
