@@ -8,6 +8,7 @@ A 7DTD modlet which attempts to make firearm ballistics/handling more realistic.
 * Handguns now have realistic range and accuracy (around 10 MOA) and remain extremely effective
 * Rifles have much better range and accuracy than anything else, more so than before (though range is probably first limited by the game's max view distance)
 * Handguns benefit least from being aimed, shotguns slightly more, and rifles the most
+* Cyclic rate of fire for fully automatic weapons are now set to their real world counterparts'
 
 The numbers I've used in my mod are calculated loosely based on what I could find in the way of the real world MOAs, shot spread, and effective ranges. Handling values (when shooting "from the hip" with crosshairs) are an arbitrary, eyeballed compromise roughly correlating to weapon lengths and sight radii. Weapons are between 2 to 20 times more accurate when aimed.
 
